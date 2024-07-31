@@ -1,0 +1,47 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+.card{
+    @apply relative my-5 mx-0
+}
+
+.input{
+    @apply w-80 h-12 border rounded-lg p-3  outline-none 
+}
+
+.input-normal{
+    @apply input border-black
+}
+
+.input-error{
+    @apply input border-red-600 
+}
+
+.label{
+    @apply absolute top-0 left-3 -translate-y-1/2 bg-white p-1
+}
+
+.label-mobilenumber{
+    @apply absolute top-0 left-28 -translate-y-1/2 bg-white p-1 text-black
+}
+
+.label-mobilenumber-error{
+    @apply absolute top-0 left-28 -translate-y-1/2 bg-white p-1 text-red-600
+}
+
+.label-normal{
+    @apply label text-black
+}
+
+.label-error{
+    @apply label text-red-600
+}
+
+.btn{
+    @apply p-2 rounded-md w-80 h-12 border border-gray-500 bg-gray-500 font-semibold
+}
+
+.row{
+    @apply flex flex-row items-center justify-around gap-3
+}
