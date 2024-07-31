@@ -175,14 +175,9 @@ export class Form {
               <label class={{ 'label-normal': true, 'label-error': this.emailError }}>Email</label>
             </div>
             <div class={{ 'flex': true, 'items-center': true, 'p-4': true, 'gap-3': true, 'input-normal': true, 'input-error': this.mobileError, 'card': true }}>
-              <select class="w-1/4 outline-none">
-                <option value="">+961</option>
-                <option value="1">+456</option>
-                <option value="2">+34</option>
-                <option value="3">+2345</option>
-              </select>
-              <input type="text" class="w-3/4 outline-none" onInput={this.onInputMobile.bind(this)} value={this.mobileInput} ref={el => (this.mobileInputEl = el)} />
-              <label class="label">Country</label>
+              <rf-select-options class='absolute left-0 top-0 -translate-x-32 w-2 h-1 -translate-y-32 z-10'></rf-select-options>
+              <input type="text" class="w-3/4 outline-none ml-24" onInput={this.onInputMobile.bind(this)} value={this.mobileInput} ref={el => (this.mobileInputEl = el)} />
+              <label class="label z-20">Country</label>
               <label class={{ 'label-mobilenumber': true, 'label-mobilenumber-error': this.mobileError }}>Mobile number</label>
             </div>
           </div>
