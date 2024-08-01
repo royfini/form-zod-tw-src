@@ -1,4 +1,4 @@
-# rf-form
+# rf-select-options
 
 
 
@@ -7,15 +7,15 @@
 
 ## Dependencies
 
-### Depends on
+### Used by
 
-- [rf-select-options](../select-option)
+ - [rf-form](../form)
 
 ### Graph
 ```mermaid
 graph TD;
   rf-form --> rf-select-options
-  style rf-form fill:#f9f,stroke:#333,stroke-width:4px
+  style rf-select-options fill:#f9f,stroke:#333,stroke-width:4px
 ```
 
 ----------------------------------------------

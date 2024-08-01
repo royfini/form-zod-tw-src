@@ -139,7 +139,7 @@ export class Form {
   render() {
     return (
       <div class="flex justify-center items-center">
-        <form onSubmit={this.onSubmitForm.bind(this)} class="flex flex-col justify-center items-center border-2 border-black rounded-md p-12 mt-24">
+        <form onSubmit={this.onSubmitForm.bind(this)} class="flex flex-col justify-center items-center border-2 border-black rounded-md p-4 lg:p-12 mt-24">
           <div class="row">
             <div class="card">
               <input

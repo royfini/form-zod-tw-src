@@ -43,5 +43,5 @@
 }
 
 .row{
-    @apply flex flex-row items-center justify-around gap-3
+    @apply flex flex-col items-center justify-center lg:flex-row lg:items-center lg:justify-around gap-3
 }
