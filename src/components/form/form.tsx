@@ -60,6 +60,26 @@ export class Form {
     this.disableButton();
   }
 
+  //or more clean
+  // Zod schema for validating only the email
+  // emailSchema = z.string().email('Invalid email address');
+
+  // handleInputChange(event: Event) {
+  //   const target = event.target as HTMLInputElement;
+  //   this[target.name] = target.value;
+
+  //   // Validate email in real-time
+  //   if (target.name === 'email') {
+  //     const emailValidation = this.emailSchema.safeParse(target.value);
+  //     this.emailErrorMessage.textContent = result.success ? '' : result.error.errors[0].message;
+  //     this.emailError = !result.success
+  //   }
+  //  .
+  //  .
+  //  .
+  //   this.disableButton();
+  // }
+
   @State() emailError = true;
   onInputEmail(event: Event) {
     const value = (event.target as HTMLInputElement).value;
@@ -175,7 +195,7 @@ export class Form {
               <label class={{ 'label-normal': true, 'label-error': this.emailError }}>Email</label>
             </div>
             <div class={{ 'flex': true, 'items-center': true, 'p-4': true, 'gap-3': true, 'input-normal': true, 'input-error': this.mobileError, 'card': true }}>
-              <rf-select-options class='absolute left-0 top-0 -translate-x-32 w-2 h-1 -translate-y-32 z-10'></rf-select-options>
+              <rf-select-options class="absolute left-0 top-0 -translate-x-32 w-2 h-1 -translate-y-32 z-10"></rf-select-options>
               <input type="text" class="w-3/4 outline-none ml-24" onInput={this.onInputMobile.bind(this)} value={this.mobileInput} ref={el => (this.mobileInputEl = el)} />
               <label class="label z-20">Country</label>
               <label class={{ 'label-mobilenumber': true, 'label-mobilenumber-error': this.mobileError }}>Mobile number</label>
